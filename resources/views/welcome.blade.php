@@ -273,12 +273,5 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
-
-        <!-- Added by Omar -->
-        <p>
-            Laravel framework has wonderful documentation covering every aspect of the framework.
-            Whether you are a newcomer or have prior experience with Laravel, we recommend reading our
-            documentation from beginning to end.
-        </p>
     </body>
 </html>
