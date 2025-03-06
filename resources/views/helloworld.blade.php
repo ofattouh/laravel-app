@@ -46,9 +46,6 @@
             @endif
         </header>
 
-
-
-
         <!-- Added by Omar -->
         <p>
            Hello world
