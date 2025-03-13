@@ -2,10 +2,20 @@
 
 use Illuminate\Support\Facades\Route;
 
-// This view is created using BootStrap 5 Template
+// These routes only have static View files without much logic, we use Route::view() instead of Route::get()
+
+// Add names to routes, and if route URL is changed, no need to change it on every file where it is used because
+// changing it here will change it everywhere else
+
+Route::view('/', 'home')->name('home');
+Route::view('contact', 'contact')->name('contact');
+Route::view('about', 'about')->name('about');
+
+/*
 Route::get('/', function () {
     return view('home');
 });
+*/
 
 // For Tailwind and modern full-stack projects, assets are placed in resources/js and resources/css folders first
 // and then are automatically compiled into /public folder, with commands: npm run dev or npm run build

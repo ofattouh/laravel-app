@@ -21,3 +21,13 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
+## Useful Laravel Links
+
+https://laraveldaily.com/lesson/laravel-beginners/install-composer-installer
+https://laraveldaily.com/lesson/vue-laravel-vite-spa-crud/spa-install-laravel-vue-first-vuejs-component
+https://laraveldaily.com/roadmap-learning-path
+
+## Useful Other Links
+
+https://startbootstrap.com/template/blog-home

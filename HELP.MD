@@ -2,9 +2,8 @@
 Useful Commands
 ===============
 
-// Start Laravel app on Development mode at: http://127.0.0.1:8000
+// Start Laravel app on Development mode at: http://127.0.0.1:8000 OR http://localhost:8000
 $composer run dev
-
 
 // Create new Laravel example-app project with files created inside folder: example-app
 $laravel new example-app
@@ -12,7 +11,7 @@ $laravel new example-app
 // Install Laravel installer Globally
 $composer global require laravel/installer
 
-=================================================================================================================
+==============================================================================================================
 
 Useful Links
 ============
