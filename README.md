@@ -22,7 +22,7 @@ You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Useful Laravel Links
+## Useful Laravel Web Links
 
 https://laraveldaily.com/lesson/laravel-beginners/install-composer-installer
 
@@ -30,6 +30,6 @@ https://laraveldaily.com/lesson/vue-laravel-vite-spa-crud/spa-install-laravel-vu
 
 https://laraveldaily.com/roadmap-learning-path
 
-## Useful Other Links
+## Useful Other Web Links
 
 https://startbootstrap.com/template/blog-home
