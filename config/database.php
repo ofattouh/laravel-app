@@ -16,7 +16,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'sqlite'),        // default installation Database
+    // 'default' => env('DB_CONNECTION', 'mysql'),      // use MySQL Database instead
 
     /*
     |--------------------------------------------------------------------------
@@ -44,10 +45,10 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => env('DB_URL'), // env() helper takes values from .env file which are called environment variables
+            'host' => env('DB_HOST', '127.0.0.1'), // NEVER use env() helper in code outside config files
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
+            'database' => env('DB_DATABASE', 'evaluation-local'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
@@ -172,3 +173,46 @@ return [
     ],
 
 ];
+
+/*
+
+    In Laravel, NO need to create tables with columns manually. Laravel uses migrations where migration schema
+    is defined inside a migration file and then run the migrations, creating tables with columns
+
+    Migrations are added in the database/migrations folder. When creating new Laravel project, there are three
+    migration files. Usually, 1 Migration file would create one table. Laravel by default, creates 3 tables
+    corresponding to users using 1 of the 3 migration files
+
+    When using the default installation database driver SQLite, migrations are run automatically after
+    creating new project. If you use any other database driver, the database will be empty initially
+
+    To run migrations, use artisan command: `php artisan migrate` in the terminal which will run all migrations
+    from the database/migrations folder
+
+    To create Migration for DB table testTable. Use artisan command: `php artisan make:migration`.
+    and as parameter, we specify: "create [table name] table" in quotation marks such as:
+    `php artisan make:migration "create testTable table"` OR
+    `php artisan make:migration create_testTable_table`
+
+    When running migrate artisan command, it only migrates migrations that haven't been executed yet. Laravel
+    has table called migrations that stores all migrations that have been run, with their batch number.
+    When we run the migration, a new record is inserted for the new test_table and batch number is updated
+
+    Laravel use database to manage sessions by default
+
+    Useful DB commands:
+
+    `php artisan db:show`               // Show information about DB and tables
+
+    `php artisan db:table TABLE_NAME`   // Show information about specific table
+
+    `php artisan migrate`               // To run migrations and build Database for fresh Laravel app installation
+
+    `php artisan migrate:fresh`         // Rebuild database if already existed and run last batch installation tables
+
+    `php artisan migrate:rollback`      // Rollback command will only roll back migrations of the last batch
+
+
+    https://laraveldaily.com/lesson/laravel-beginners/db-structure-migrations-env-config
+
+*/
