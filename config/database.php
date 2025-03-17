@@ -202,15 +202,23 @@ return [
 
     Useful DB commands:
 
-    `php artisan db:show`               // Show information about DB and tables
+    `php artisan db:show`                 // Show information about DB and tables
 
-    `php artisan db:table TABLE_NAME`   // Show information about specific table
+    `php artisan db:table TABLE_NAME`     // Show information about specific table
 
-    `php artisan migrate`               // To run migrations and build Database for fresh Laravel app installation
+    `php artisan migrate`                 // To run migrations and build Database for fresh Laravel app installation
 
-    `php artisan migrate:fresh`         // Rebuild database if already existed and run last batch installation tables
+    `php artisan migrate:fresh`           // Rebuild database if already existed and run last batch installation tables
 
-    `php artisan migrate:rollback`      // Rollback command will only roll back migrations of the last batch
+    `php artisan migrate:rollback`        // Rollback command will only roll back migrations of the last batch
+
+    `composer dump-autoload`              // Regenerate Composer autoload files and ensures all classes are autoloaded
+
+    `php artisan config:cache`            // Clear and rebuild application cache
+
+    `php artisan cache:clear`             // Clear and rebuild application cache
+
+    `php artisan make:model TestCategpry` // To create Model class: TestCategory, run artisan command
 
 
     https://laraveldaily.com/lesson/laravel-beginners/db-structure-migrations-env-config

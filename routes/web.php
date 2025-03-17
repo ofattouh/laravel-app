@@ -7,7 +7,12 @@ use Illuminate\Support\Facades\Route;
 // Add names to routes, and if route URL is changed, no need to change it on every file where it is used because
 // changing it here will change it everywhere else
 
-Route::view('/', 'home')->name('home');
+// Instead of closure function, use array parameter: First key will be path to TestController, and second
+// parameter will be method defined inside that TestController and route it to view home
+
+// Route::view('/', 'home')->name('home');
+Route::get('/', [\App\Http\Controllers\TestController::class, 'index'])->name('home');
+
 Route::view('contact', 'contact')->name('contact');
 Route::view('about', 'about')->name('about');
 

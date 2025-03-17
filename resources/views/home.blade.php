@@ -120,21 +120,44 @@
             <!-- Categories widget-->
             <div class="card mb-4">
                 <div class="card-header">Categories</div>
+
+                <!-- foreach loop show TestController variable $categories. Blade directives start with "@" -->
                 <div class="card-body">
+                    <p class="card-text fw-bold">Hard coded Categories</p>
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
-                                <li><a href="#!">Web Design</a></li>
-                                <li><a href="#!">HTML</a></li>
-                                <li><a href="#!">Freebies</a></li>
+                                @foreach($categories as $category)
+                                    <li><a href="#!">{{ $category }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
+                    </div>
+                </div>
 
+                <!-- foreach loop show TestController variable $categoriesDB. Blade directives start with "@" -->
+                <div class="card-body">
+                    <p class="card-text fw-bold">Database Categories (Query Builder)</p>
+                    <div class="row">
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
-                                <li><a href="#!">JavaScript</a></li>
-                                <li><a href="#!">CSS</a></li>
-                                <li><a href="#!">Tutorials</a></li>
+                                @foreach($categoriesDB as $category)
+                                    <li><a href="#!">{{ $category->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- foreach loop show TestController variable $categoriesDB2. Blade directives start with "@" -->
+                <div class="card-body">
+                    <p class="card-text fw-bold">Database Categories (Eloquent Model)</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                @foreach($categoriesDB2 as $category)
+                                    <li><a href="#!">{{ $category->name }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -158,5 +181,8 @@
 
     // To extend main layout file, use extends Blade directive at start of this View file and provide location of
     main layout file
+
+    // View Home will show categories data and Controller TestController will pass the data from Database
+    and route it to View Home
 
 -->
