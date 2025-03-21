@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class TestCategory extends Model
 {
     // Use custom table name from database instead of default Model class plural name as database table name
-    protected $table = 'test_table';
+    protected $table = 'test_categories';
 }
 
 
@@ -25,7 +25,7 @@ class TestCategory extends Model
     as plural form of the word "category". If you have another naming convention, you can specify table name
     inside the Model class with the protected $table property
 
-    `php artisan make:model TestCategpry`   // To create Model class: TestCategory, run artisan command
+    `php artisan make:model TestCategory`   // To create Model class: TestCategory, run artisan command
 
 
     https://laraveldaily.com/lesson/laravel-beginners/mvc-model-controller-view-forerach

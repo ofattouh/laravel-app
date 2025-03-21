@@ -189,14 +189,14 @@ return [
     To run migrations, use artisan command: `php artisan migrate` in the terminal which will run all migrations
     from the database/migrations folder
 
-    To create Migration for DB table testTable. Use artisan command: `php artisan make:migration`.
-    and as parameter, we specify: "create [table name] table" in quotation marks such as:
-    `php artisan make:migration "create testTable table"` OR
-    `php artisan make:migration create_testTable_table`
+    To create Migration for DB table testCategories. Use artisan command: `php artisan make:migration`.
+    and as parameter, we specify: "create [table name] table" in quotation marks or underscores such as:
+    `php artisan make:migration "create testCategories table"` OR
+    `php artisan make:migration create_testCategories_table`
 
     When running migrate artisan command, it only migrates migrations that haven't been executed yet. Laravel
     has table called migrations that stores all migrations that have been run, with their batch number.
-    When we run the migration, a new record is inserted for the new test_table and batch number is updated
+    When we run the migration, a new record is inserted for the new test_categories and batch number is updated
 
     Laravel use database to manage sessions by default
 
@@ -205,6 +205,9 @@ return [
     `php artisan db:show`                 // Show information about DB and tables
 
     `php artisan db:table TABLE_NAME`     // Show information about specific table
+
+    `php artisan make:migration "create testCategories table""`  // create Migration for DB table testCategories
+    `php artisan make:migration create_testCategories_table`     // create Migration for DB table testCategories
 
     `php artisan migrate`                 // To run migrations and build Database for fresh Laravel app installation
 
@@ -218,7 +221,9 @@ return [
 
     `php artisan cache:clear`             // Clear and rebuild application cache
 
-    `php artisan make:model TestCategpry` // To create Model class: TestCategory, run artisan command
+    `php artisan make:model TestCategory` // Create Model:TestCategory class file (1 artisan command)
+
+    `php artisan make:model TestPost -m`  // Create Model:TestPost class file and Migration:test_posts file (2 artisan commands)
 
 
     https://laraveldaily.com/lesson/laravel-beginners/db-structure-migrations-env-config
