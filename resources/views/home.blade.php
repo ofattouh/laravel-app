@@ -35,14 +35,21 @@
 
                         <!-- Blog post-->
                         <div class="card mb-4">
-                            <a href="#"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+
+                            <!--
+                                Route Parameter: $post is passed as second argument inside route() helper which can be
+                                passed as whole object: $post or explicitly passing only the ID using $post->id
+                            -->
+                            <a href="{{ route('post.show', $post) }}">
+                                <img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." />
+                            </a>
 
                             <div class="card-body">
+                                <div class="small text-muted">Created at: {{ $post->created_at }}</div>
+                                <div class="small text-muted">Updated at: {{ $post->updated_at }}</div><br>
                                 <h2 class="card-title h4">{{ $post->title }}</h2>
                                 <p class="card-text">{{ $post->text }}</p>
                                 <a class="btn btn-primary" href="#">Read more →</a>
-                                <div class="small text-muted"><br>Created: {{ $post->created_at }}</div>
-                                <div class="small text-muted">Updated: {{ $post->updated_at }}</div>
                             </div>
                         </div>
                     </div>
