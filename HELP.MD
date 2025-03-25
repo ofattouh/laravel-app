@@ -8,6 +8,9 @@ $composer run dev
 // Create new Laravel example-app project with files created inside folder: example-app
 $laravel new example-app
 
+// install Laravel Breeze OR any other package using Composer
+$composer require laravel/breeze
+
 // Install Laravel installer Globally
 $composer global require laravel/installer
 
