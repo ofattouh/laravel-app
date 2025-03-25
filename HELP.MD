@@ -19,7 +19,9 @@ $composer global require laravel/installer
 Useful Links
 ============
 https://laraveldaily.com/lesson/laravel-beginners/install-composer-installer
+
 https://laraveldaily.com/lesson/vue-laravel-vite-spa-crud/spa-install-laravel-vue-first-vuejs-component
+
 https://laraveldaily.com/roadmap-learning-path
 
 https://startbootstrap.com/template/blog-home
